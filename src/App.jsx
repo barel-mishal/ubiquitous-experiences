@@ -46,7 +46,9 @@ function Ui() {
 function App() {
   return (
     <div class={styles.App}>
-      <Ui />
+      <div class={styles.warper}>
+        <Ui />
+      </div>
     </div>
   );
 }
