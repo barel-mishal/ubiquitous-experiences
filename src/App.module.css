@@ -3,8 +3,23 @@
   display: grid;
   place-content: center;
   height: 100%;
-  
+  background-color: #CDFDEE;
 }
+
+/* warper - start */ 
+
+
+.warper {
+  display: grid;
+  grid-template-columns: minmax(auto, 500px);
+  border-radius: 1rem;
+  height: calc(100vh - 20px);
+  margin: 10px 0;
+  align-content: baseline;
+}
+
+
+/* warper - end */ 
 
 
 /* header start */
@@ -26,7 +41,6 @@ header {
 nav {
   display: grid;
   justify-content: center;
-  background-color: aliceblue;
   padding: 1rem 0;
 }
 
@@ -38,7 +52,7 @@ nav {
 .nav-button {
   align-items: center;
   appearance: none;
-  background-color: #FCFCFD;
+  background-color: #F3FFFB;
   border-radius: 4px;
   border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
@@ -66,10 +80,6 @@ nav {
   font-size: 18px;
 }
 
-.nav-button:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
 .nav-button:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
   transform: translateY(-2px);
@@ -90,11 +100,14 @@ nav {
 .grid-headers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  background-color: cadetblue;
+  background-color: #22AE9A;
   font-size: small;
-  padding: 1rem 0.5rem;
+  padding: 0.6rem 0.5rem;
   font-weight: bold;
   gap: 5px;
+  color: #F3FFFB;
+  border-radius: 5px;
+  margin: 0 5px;
 }
 
 .header {
@@ -112,8 +125,13 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   font-size: small;
+  background-color: #F3FFFB;
+  margin: 5px;
+  border-radius: 5px;
+  color: #108575;
   padding: 1rem 0.5rem;
   gap: 5px;
+  overflow: scroll;
 }
 
 
@@ -123,16 +141,25 @@ nav {
 .sum-section {
   display: grid;
   text-align: left;
-  margin: 0.5rem 1rem;
+  margin: 0 5px;
   grid-template-columns: auto 1fr;
   align-content: center;
   gap: 1rem;
+  background-color: #F3FFFB;
+  color: #055d60;
+  padding: 0 1rem;
+  border-radius: 5px;
+
 }
 
-
-/* warper */ 
-
-.warper {
+.section-grid {
   display: grid;
-  grid-template-columns: minmax(auto, 500px);
+  justify-content: start;
+  margin: 20px 0;
+}
+
+input {
+  display: grid;
+  border: none;
+  background: none;
 }

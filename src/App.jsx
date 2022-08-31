@@ -1,6 +1,14 @@
 import styles from './App.module.css';
+import { For } from 'solid-js';
+import { createStore } from  "solid-js/store";
 
 function Ui() {
+
+  const [entris, setEntris] = createStore([
+    '8/7/2023', 'Exp', 'Goods', '-100', 'Cumputer'
+  ]);
+  console.log(entris)
+
   return (
     <>
       <header>
@@ -19,24 +27,21 @@ function Ui() {
         <div class={styles['header']}>Comment</div>
       </section>
       <section class={styles['grid-data']}>
-        <div className="grid-child">8/7/2023</div>
-        <div className="grid-child">Exp</div>
-        <div className="grid-child">Goods</div>
-        <div className="grid-child">-100</div>
-        <div className="grid-child">Cumputer</div>
-        <div className="grid-child">8/7/2023</div>
-        <div className="grid-child">Exp</div>
-        <div className="grid-child">Goods</div>
-        <div className="grid-child">-100</div>
-        <div className="grid-child">Cumputer</div>
+        <For each={entris}>{(entri, i) =>
+          <div className="grid-child">
+            <input type="text" value={entri}/> 
+          </div>
+        }</For>
       </section>
-      <section className={styles["sum-section"]}>
-        <p className="title">
-          Net Balance
-        </p>
-        <p>
-          -200
-        </p>
+      <section className={styles['section-grid']}>
+        <div className={styles["sum-section"]}>
+            <p className="title">
+              Net Balance
+            </p>
+            <p>
+              -200
+            </p>
+        </div>        
       </section>
     </>
   )
