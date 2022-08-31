@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+
+/* header start */
+
+
+header {
+  height: 60px;
+  display: grid;
+  place-content: center;
+}
+
+
+/* header end */
+
+
+/* nav start */
+
+
 nav {
   display: grid;
   justify-content: center;
@@ -12,4 +29,53 @@ nav {
 .nav-button {
   font-size: 1rem;
   padding: 0.5rem 7rem;
+}
+
+
+/* nav end */
+
+
+/* section - grid header - start */
+
+
+.grid-headers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: cadetblue;
+  font-size: small;
+  padding: 1rem 0.5rem;
+  font-weight: bold;
+  gap: 5px;
+}
+
+.header {
+  padding: 0.5rem 0;
+}
+
+
+/* section - grid header - end*/
+
+
+/* section - grid data - start*/
+
+
+.grid-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-size: small;
+  padding: 1rem 0.5rem;
+  gap: 5px;
+}
+
+
+/* section - grid data - end*/
+
+
+.sum-section {
+  display: grid;
+  text-align: left;
+  margin: 0.5rem 1rem;
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  gap: 1rem;
 }

@@ -1,26 +1,24 @@
 import styles from './App.module.css';
 
-function App() {
+function Ui() {
   return (
-    <div class={styles.App}>
+    <>
       <header>
-        <div>
-          Expenses Income Tracker
-        </div> 
+        <div> Expenses Income Tracker </div> 
       </header>
       <nav>
         <button class={styles['nav-button']}>
           Add Row
         </button>
       </nav>
-      <section Class='grid-headers'>
-        <div class='grid-child-1'>DateTime</div>
-        <div class='grid-child-2'>Inc or Exp</div>
-        <div class='grid-child-3'>Category</div>
-        <div class='grid-child-4'>Amount</div>
-        <div class='grid-child-5'>Comment</div>
+      <section Class={styles['grid-headers']}>
+        <div class={styles['header']}>DateTime</div>
+        <div class={styles['header']}>Inc or Exp</div>
+        <div class={styles['header']}>Category</div>
+        <div class={styles['header']}>Amount</div>
+        <div class={styles['header']}>Comment</div>
       </section>
-      <section class='grid-data'>
+      <section class={styles['grid-data']}>
         <div className="grid-child">8/7/2023</div>
         <div className="grid-child">Exp</div>
         <div className="grid-child">Goods</div>
@@ -32,16 +30,23 @@ function App() {
         <div className="grid-child">-100</div>
         <div className="grid-child">Cumputer</div>
       </section>
-      <section className="sum-section">
+      <section className={styles["sum-section"]}>
         <p className="title">
           Net Balance
         </p>
-        <span>
+        <p>
           -200
-        </span>
+        </p>
       </section>
+    </>
+  )
+}
 
 
+function App() {
+  return (
+    <div class={styles.App}>
+      <Ui />
     </div>
   );
 }
